@@ -1,0 +1,11 @@
+<div class="container">
+  <div [style.width]="slotWidth" *ngFor="let slot of slots; let i = index" [ngClass]="{
+    'current': i === value && i !== 0, 
+    'invisible': i !== 0 && value === 0,
+    'slide': i === value && i !== 0,
+    'slide-back': i === value && i === 0,
+    'slot': true}">
+
+    <div class="current slot" *ngIf="i === value && value === 0" [style.width]="innerSlotWidth"></div>
+  </div>
+</div>

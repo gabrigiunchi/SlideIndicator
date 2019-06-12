@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: #eaeaea;
+}
+
+.super-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.slot {
+    height: 1rem;
+}
+
+.invisible {
+    display: none;
+}
+
+.current {
+    background: #003869;
+}
+
+.slide {
+    position: relative;
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 0.6s;
+    animation-name: slide;
+    animation-duration: 0.6s;
+}
+
+.slide-back {
+    position: relative;
+    -webkit-animation-name: slide-back;
+    -webkit-animation-duration: 0.6s;
+    animation-name: slide-back;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slide-back {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-back {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
